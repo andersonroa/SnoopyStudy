@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SnoopyStudy</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script></head>
+<body>
+<header><b class="logo"><img class="sn sm" src="img/feliz.png" alt=""> Snoopy<i>Study</i></b>
+<nav><a href="#inicio">Inicio</a><a href="#metas">Metas</a><a href="#catalogo">Tienda</a><a href="#ia">Snoopy AI</a><a href="#contacto">Contacto</a><a href="#admin">Admin</a></nav>
+<span class="chip" id="xpBadge"></span></header>
+<main>
+<section id="inicio" class="hero">
+ <div><h1>SnoopyStudy</h1><p>Convierte tus metas académicas en logros.</p>
+ <a class="btn" href="#metas">Comenzar</a> <a class="btn ghost" href="#catalogo">Conocer más</a></div>
+ <img class="mascot" id="mascot" src="img/saludando.png" alt="Snoopy">
+</section>
+<section id="metas"><h2>Tus metas</h2>
+ <div class="grid2">
+ <form id="goalForm" class="card"><h3>Crear meta</h3>
+  <label>Materia<input name="materia" required placeholder="Historia"></label>
+  <label>Tema<input name="tema" required placeholder="Evolución"></label>
+  <label>Minutos disponibles por día<input name="min" type="number" min="10" max="480" value="45" required></label>
+  <label>Nivel de conocimiento<select name="nivel"><option>Básico</option><option>Medio</option><option>Alto</option></select></label>
+  <button class="btn">Crear meta</button></form>
+ <div class="card"><h3 id="hello"></h3>
+  <div class="bar"><i id="bar"></i></div><small id="lvl"></small>
+  <ul id="goals"></ul></div>
+ </div></section>
+<section id="catalogo"><h2>Tienda de recompensas</h2><p>Gana XP cumpliendo metas y cámbialo por emblemas, collares y avatares.</p><div id="catalog" class="grid3"></div></section>
+<section id="ia"><h2>Snoopy AI</h2>
+ <div class="card chat"><div id="log" aria-live="polite"></div>
+ <form id="chatForm"><input id="msg" required placeholder="Escribe aquí…" autocomplete="off"><button class="btn">Enviar</button></form>
+ <small>Prueba: <code>plan Historia</code> · <code>tarjetas: pega tus apuntes</code> · <code>pomodoro</code> · <code>examen</code></small></div></section>
+<section id="contacto"><h2>Contacto</h2><img id="cImg" class="sn" src="img/saludando.png" alt="Snoopy">
+ <form id="contactForm" class="card narrow">
+  <label>Nombre<input name="name" required></label>
+  <label>Correo<input name="email" type="email" required></label>
+  <label>Mensaje<textarea name="text" rows="4" required></textarea></label>
+  <button class="btn">Enviar mensaje</button><small id="cStatus"></small></form></section>
+<section id="admin"><h2>Panel admin</h2>
+ <form id="loginForm" class="card narrow"><label>Correo<input name="email" type="email" required></label>
+  <label>Contraseña<input name="pass" type="password" required></label>
+  <button class="btn">Entrar</button><small id="lStatus">Modo demo: admin@snoopy.com / snoopy123</small></form>
+ <div id="panel" hidden>
+  <button class="btn ghost" id="logout">Cerrar sesión</button>
+  <div class="grid2"><div class="card"><h3>Mensajes recibidos</h3><ul id="msgs"></ul></div>
+  <form id="itemForm" class="card"><h3>Agregar recompensa</h3>
+   <label>Nombre<input name="name" required></label><label>Descripción<input name="description"></label>
+   <label>Precio en XP<input name="price_xp" type="number" min="0" value="50" required></label>
+   <label>Imagen (archivo de img/)<input name="emoji" value="feliz.png"></label><button class="btn">Agregar</button>
+   <ul id="adminItems"></ul></form></div></div></section>
+</main>
+<footer>SnoopyStudy · Proyecto final Jóvenes creaTivos</footer>
+</body></html>
